@@ -7,8 +7,11 @@ import {
   BookOpen,
   MessageCircleHeart,
   HandHeart,
+  Clock,
 } from "lucide-react";
-import { STORIES, bibleGatewayUrl } from "@/lib/recommendations/mock";
+import { getAccountById } from "@/content/bible-accounts";
+import { bibleGatewayUrl } from "@/lib/bible";
+import { humanizeTag } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -18,9 +21,9 @@ export default async function StoryPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const story = STORIES[slug];
+  const account = getAccountById(slug);
 
-  if (!story) {
+  if (!account) {
     notFound();
   }
 
@@ -34,14 +37,45 @@ export default async function StoryPage({
         Back to Home
       </Link>
 
+      {account.heroImage ? (
+        <div className="animate-fade-up overflow-hidden rounded-3xl">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={account.heroImage}
+            alt=""
+            className="h-40 w-full object-cover sm:h-56"
+          />
+        </div>
+      ) : (
+        <div
+          className="animate-fade-up h-24 w-full rounded-3xl bg-radial-glow ring-1 ring-border/60 sm:h-32"
+          aria-hidden
+        />
+      )}
+
       <div className="animate-fade-up" style={{ animationDelay: "60ms" }}>
-        <p className="text-xs font-medium tracking-wide text-primary uppercase">
-          A story for you
-        </p>
+        <div className="flex items-center justify-between gap-3">
+          <p className="text-xs font-medium tracking-wide text-primary uppercase">
+            A story for you
+          </p>
+          <span className="flex shrink-0 items-center gap-1 text-xs text-muted-foreground">
+            <Clock className="size-3.5" />
+            {account.estimatedReadingTime} min read
+          </span>
+        </div>
         <h1 className="mt-2 font-heading text-4xl font-medium tracking-tight text-foreground">
-          {story.name}
+          {account.name}
         </h1>
-        <p className="mt-1 text-muted-foreground">{story.epithet}</p>
+        <p className="mt-1 text-muted-foreground">{account.title}</p>
+        {account.lifeSituations.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {account.lifeSituations.map((tag) => (
+              <Badge key={tag} variant="secondary">
+                {humanizeTag(tag)}
+              </Badge>
+            ))}
+          </div>
+        )}
       </div>
 
       <section
@@ -56,28 +90,40 @@ export default async function StoryPage({
             What the Bible Records
           </h2>
           <p className="mt-2 leading-relaxed text-foreground/90">
-            {story.overview}
+            {account.overview}
           </p>
         </div>
       </section>
 
       <section
+        className="animate-fade-up rounded-3xl bg-card/70 p-6 ring-1 ring-border/60 sm:p-7"
+        style={{ animationDelay: "140ms" }}
+      >
+        <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
+          Why this account
+        </p>
+        <p className="mt-2 leading-relaxed text-foreground/90">
+          {account.whyRelevant}
+        </p>
+      </section>
+
+      <section
         className="animate-fade-up flex flex-col items-start gap-3 rounded-3xl bg-primary/10 p-6 ring-1 ring-primary/20 sm:flex-row sm:items-center sm:justify-between sm:p-7"
-        style={{ animationDelay: "150ms" }}
+        style={{ animationDelay: "160ms" }}
       >
         <div>
           <h2 className="font-heading text-lg font-medium text-foreground">
             Read the Full Account
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            This is a guide, not a substitute. {story.name}&apos;s story is
-            worth reading in full, in {story.fullReference}.
+            This is a guide, not a substitute. {account.name}&apos;s story is
+            worth reading in full, in {account.fullBibleReference}.
           </p>
         </div>
         <Button
           render={
             <a
-              href={bibleGatewayUrl(story.fullReference)}
+              href={bibleGatewayUrl(account.fullBibleReference)}
               target="_blank"
               rel="noopener noreferrer"
             />
@@ -86,7 +132,7 @@ export default async function StoryPage({
           variant="outline"
           className="w-full shrink-0 bg-background sm:w-auto"
         >
-          Read {story.fullReference}
+          Read {account.fullBibleReference}
           <ArrowUpRight className="size-4" />
         </Button>
       </section>
@@ -102,7 +148,7 @@ export default async function StoryPage({
           A few lines from the full account above, worth sitting with.
         </p>
         <div className="mt-4 flex flex-col gap-4">
-          {story.scriptures.map((scripture) => (
+          {account.keyScriptures.map((scripture) => (
             <div
               key={scripture.reference}
               className="rounded-2xl bg-muted/60 p-4"
@@ -120,7 +166,7 @@ export default async function StoryPage({
 
       <section
         className="animate-fade-up flex items-start gap-4 rounded-3xl border border-border/60 bg-card p-6 shadow-[0_1px_2px_rgba(0,0,0,0.03)] sm:p-7"
-        style={{ animationDelay: "240ms" }}
+        style={{ animationDelay: "220ms" }}
       >
         <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
           <MessageCircleHeart className="size-4.5" strokeWidth={2} />
@@ -130,11 +176,11 @@ export default async function StoryPage({
             Guided Reflection
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Rooted in what happened in {story.name}&apos;s account, not
+            Rooted in what happened in {account.name}&apos;s account, not
             general advice.
           </p>
           <ul className="mt-3 flex flex-col gap-3">
-            {story.reflection.map((question) => (
+            {account.reflectionQuestions.map((question) => (
               <li
                 key={question}
                 className="flex gap-2.5 leading-relaxed text-foreground/90"
@@ -149,7 +195,7 @@ export default async function StoryPage({
 
       <section
         className="animate-fade-up rounded-3xl bg-primary/8 p-6 ring-1 ring-primary/15 sm:p-7"
-        style={{ animationDelay: "300ms" }}
+        style={{ animationDelay: "260ms" }}
       >
         <div className="flex items-start gap-4">
           <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
@@ -161,11 +207,11 @@ export default async function StoryPage({
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
               Not words from God, but a starting point inspired by{" "}
-              {story.name}&apos;s account — pray it as your own, in your own
-              words.
+              {account.name}&apos;s account — pray it as your own, in your
+              own words.
             </p>
             <p className="mt-3 leading-relaxed text-foreground/90 italic">
-              {story.prayer}
+              {account.prayerPrompt}
             </p>
           </div>
         </div>
@@ -173,13 +219,13 @@ export default async function StoryPage({
 
       <section
         className="animate-fade-up flex flex-col items-center gap-3 rounded-3xl border border-dashed border-border/70 bg-card/60 p-8 text-center"
-        style={{ animationDelay: "360ms" }}
+        style={{ animationDelay: "320ms" }}
       >
         <span className="flex size-11 items-center justify-center rounded-2xl bg-muted text-muted-foreground">
           <Film className="size-5" strokeWidth={2} />
         </span>
         <h2 className="font-heading text-lg font-medium text-foreground">
-          Watch {story.name}&apos;s Story
+          Watch {account.name}&apos;s Story
         </h2>
         <p className="max-w-sm text-sm text-muted-foreground">
           A dramatized retelling of this story is on the way.

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { ArrowUp } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { EmotionCard } from "@/components/home/EmotionCard";
-import { EMOTIONS } from "@/lib/recommendations/mock";
+import { EMOTIONS } from "@/content/emotions";
 import { cn } from "@/lib/utils";
 
 export function HeartCheckIn() {

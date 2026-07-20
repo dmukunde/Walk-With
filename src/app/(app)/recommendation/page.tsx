@@ -1,10 +1,7 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import {
-  getRecommendationByEmotion,
-  getRecommendationFromText,
-} from "@/lib/recommendations/mock";
-import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { getRecommendation } from "@/lib/recommendations/engine";
+import { RecommendationCard } from "@/components/recommendation/RecommendationCard";
 
 export default async function RecommendationPage({
   searchParams,
@@ -12,12 +9,7 @@ export default async function RecommendationPage({
   searchParams: Promise<{ emotion?: string; input?: string }>;
 }) {
   const params = await searchParams;
-
-  const recommendation = params.input
-    ? getRecommendationFromText(params.input)
-    : getRecommendationByEmotion(params.emotion ?? "unsure");
-
-  const { message, story, emotionLabel } = recommendation;
+  const { message, emotionLabel, recommendations } = getRecommendation(params);
 
   return (
     <div className="flex flex-col gap-8">
@@ -29,7 +21,10 @@ export default async function RecommendationPage({
         Back
       </Link>
 
-      <div className="animate-fade-up flex flex-col gap-4" style={{ animationDelay: "60ms" }}>
+      <div
+        className="animate-fade-up flex flex-col gap-4"
+        style={{ animationDelay: "60ms" }}
+      >
         {emotionLabel && (
           <span className="w-fit rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
             {emotionLabel}
@@ -38,43 +33,28 @@ export default async function RecommendationPage({
         <p className="text-balance font-heading text-xl leading-snug text-foreground sm:text-2xl">
           {message}
         </p>
+        {recommendations.length > 1 && (
+          <p className="text-sm text-muted-foreground">
+            A few accounts speak to this. Choose the one you&apos;d like to
+            begin with.
+          </p>
+        )}
       </div>
 
-      <div
-        className="animate-fade-up group relative overflow-hidden rounded-3xl border border-border/60 bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03),0_20px_44px_-24px_rgba(80,50,20,0.25)]"
-        style={{ animationDelay: "140ms" }}
-      >
-        <div className="bg-radial-glow p-7 sm:p-9">
-          <p className="text-xs font-medium tracking-wide text-primary uppercase">
-            An account for you
-          </p>
-          <h2 className="mt-2 font-heading text-3xl font-medium tracking-tight text-foreground">
-            {story.name}
-          </h2>
-          <p className="mt-1 text-sm text-muted-foreground">{story.epithet}</p>
-          <p className="mt-5 leading-relaxed text-foreground/90">
-            {story.overview}
-          </p>
-
-          <div className="mt-6 rounded-2xl bg-card/70 p-5 ring-1 ring-border/60">
-            <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-              Why this account
-            </p>
-            <p className="mt-2 leading-relaxed text-foreground/90">
-              {story.whyRelevant}
-            </p>
-          </div>
-
-          <Button
-            render={<Link href={`/story/${story.slug}`} />}
-            nativeButton={false}
-            size="lg"
-            className="mt-7"
+      <div className="flex flex-col gap-5">
+        {recommendations.map(({ account, rank }) => (
+          <div
+            key={account.id}
+            className="animate-fade-up"
+            style={{ animationDelay: `${100 + rank * 60}ms` }}
           >
-            Explore {story.name}&apos;s account
-            <ArrowRight className="size-4" />
-          </Button>
-        </div>
+            <RecommendationCard
+              account={account}
+              rank={rank}
+              featured={rank === 1}
+            />
+          </div>
+        ))}
       </div>
 
       <p
