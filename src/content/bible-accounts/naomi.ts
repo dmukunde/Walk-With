@@ -33,7 +33,7 @@ const naomi: BibleAccount = {
     "grief",
     "grieving",
     "loss",
-    "lost",
+    "lost my",
     "died",
     "death",
     "miscarriage",

@@ -10,6 +10,7 @@ const job: BibleAccount = {
     "loss-of-everything",
     "unanswered-questions",
     "integrity",
+    "distant-from-god",
   ],
   overview:
     "Job was described as blameless and upright, yet in a single day he lost his children, his servants, and his livestock, and was later afflicted with painful sores over his whole body. His wife told him to curse God and die, but Job refused — though he did later curse the day he was born and pressed God at length for an explanation. After many chapters of Job and his friends debating why this happened, God answered Job out of a storm, not with an explanation, but with a series of questions about the scope of creation. Job's fortunes were eventually restored, and he had more children and lived another 140 years.",

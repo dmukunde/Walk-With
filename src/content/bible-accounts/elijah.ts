@@ -5,7 +5,13 @@ const elijah: BibleAccount = {
   name: "Elijah",
   title: "The prophet who was allowed to rest",
   emotionTags: ["low", "lonely"],
-  lifeSituations: ["exhaustion", "burnout", "hearing-god", "prophetic-ministry"],
+  lifeSituations: [
+    "exhaustion",
+    "burnout",
+    "hearing-god",
+    "prophetic-ministry",
+    "distant-from-god",
+  ],
   overview:
     "After defeating the prophets of Baal, Elijah fled into the wilderness when Queen Jezebel threatened his life. He sat under a bush and asked God to let him die. God sent an angel who gave him food and let him sleep, twice, before he traveled on. At Horeb he told God, \"I am the only one left,\" and God passed by — not in the wind, the earthquake, or the fire, but in a gentle whisper.",
   whyRelevant:
