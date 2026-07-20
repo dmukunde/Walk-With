@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A robed figure stands facing a golden sunrise over a peaceful camp, tents upright and a flock grazing quietly.">
+  <defs>
+    <linearGradient id="sky5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a4e3a"/>
+      <stop offset="45%" stop-color="#c9863f"/>
+      <stop offset="100%" stop-color="#f2c877"/>
+    </linearGradient>
+    <linearGradient id="ground5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4d3c22"/>
+      <stop offset="100%" stop-color="#1c150c"/>
+    </linearGradient>
+    <radialGradient id="sun5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff3d6" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#ffd98a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffd98a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="900" fill="url(#sky5)"/>
+
+  <circle cx="1180" cy="360" r="260" fill="url(#sun5)"/>
+  <circle cx="1180" cy="360" r="70" fill="#fff6e2"/>
+
+  <path d="M0,560 L200,540 L420,570 L650,535 L900,565 L1150,540 L1350,560 L1600,545 L1600,640 L0,640 Z" fill="#8a5a34" opacity="0.4"/>
+
+  <path d="M0,630 C300,590 600,650 900,615 C1150,590 1400,635 1600,610 L1600,900 L0,900 Z" fill="url(#ground5)"/>
+
+  <g transform="translate(330,600)">
+    <path d="M0,0 L75,-150 L150,0 Z" fill="#1c130c"/>
+    <path d="M20,0 L75,-95 L130,0 Z" fill="#120c07"/>
+  </g>
+  <g transform="translate(500,615)" opacity="0.9">
+    <path d="M0,0 L60,-110 L120,0 Z" fill="#1c130c"/>
+  </g>
+
+  <g fill="#150f09">
+    <g transform="translate(920,700) scale(0.75)"><ellipse cx="0" cy="0" rx="22" ry="14"/><rect x="-14" y="8" width="4" height="14"/><rect x="8" y="8" width="4" height="14"/></g>
+    <g transform="translate(985,690) scale(0.6)"><ellipse cx="0" cy="0" rx="22" ry="14"/><rect x="-14" y="8" width="4" height="14"/><rect x="8" y="8" width="4" height="14"/></g>
+    <g transform="translate(1050,705) scale(0.85)"><ellipse cx="0" cy="0" rx="22" ry="14"/><rect x="-14" y="8" width="4" height="14"/><rect x="8" y="8" width="4" height="14"/></g>
+  </g>
+
+  <g transform="translate(720,660)" fill="#0f0b07">
+    <path d="M-52,140 C-62,60 -34,-30 0,-70 C34,-30 62,60 52,140 Z"/>
+    <circle cx="0" cy="-96" r="26"/>
+  </g>
+
+  <g fill="#1a130c" opacity="0.55">
+    <g transform="translate(1250,700) scale(0.4)">
+      <path d="M-40,140 C-46,80 -30,10 0,-90 C30,10 46,80 40,140 Z"/>
+      <circle cx="0" cy="-112" r="24"/>
+    </g>
+    <g transform="translate(1310,712) scale(0.32)">
+      <path d="M-40,140 C-46,80 -30,10 0,-90 C30,10 46,80 40,140 Z"/>
+      <circle cx="0" cy="-112" r="24"/>
+    </g>
+  </g>
+</svg>

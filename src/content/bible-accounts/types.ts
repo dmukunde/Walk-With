@@ -66,6 +66,8 @@ export type BibleAccount = {
   reflectionQuestions: string[];
   /** A starting point for the reader's own prayer — never framed as words from God. */
   prayerPrompt: string;
+  /** One or two sentences: the core Bible-grounded takeaway, shown on the Journey's finale screen. */
+  takeaway: string;
   /** The complete passage(s) to read for this account, e.g. "1 Kings 19" or "Genesis 37; 39-45". */
   fullBibleReference: string;
   /** Path to a hero image, once real artwork exists. Undefined falls back to a generic gradient. */

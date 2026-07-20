@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A storm-dark sky over a wilderness camp, tents tilted in the wind and a flock scattering in the distance.">
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#211a2b"/>
+      <stop offset="45%" stop-color="#4a2f33"/>
+      <stop offset="75%" stop-color="#96552f"/>
+      <stop offset="100%" stop-color="#c98a4b"/>
+    </linearGradient>
+    <linearGradient id="ground1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2a22"/>
+      <stop offset="100%" stop-color="#150f0c"/>
+    </linearGradient>
+    <linearGradient id="whirl1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241d28" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#241d28" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="900" fill="url(#sky1)"/>
+
+  <!-- distant ridge -->
+  <path d="M0,560 L120,540 L240,565 L360,530 L520,560 L680,520 L820,555 L980,525 L1140,558 L1300,530 L1460,560 L1600,540 L1600,650 L0,650 Z" fill="#2c2026" opacity="0.55"/>
+
+  <!-- windstorm funnel, tapering from sky to ground -->
+  <g transform="translate(1160,0)">
+    <path d="M-130,120 C-60,180 60,180 130,120 C70,300 40,460 14,635 C6,660 -6,660 -14,635 C-40,460 -70,300 -130,120 Z" fill="url(#whirl1)"/>
+    <path d="M-90,220 C-30,250 30,250 90,220" fill="none" stroke="#1c1620" stroke-width="5" opacity="0.4" stroke-linecap="round"/>
+    <path d="M-55,400 C-18,420 18,420 55,400" fill="none" stroke="#1c1620" stroke-width="4" opacity="0.4" stroke-linecap="round"/>
+    <path d="M-30,560 C-10,575 10,575 30,560" fill="none" stroke="#1c1620" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+  </g>
+
+  <!-- ground -->
+  <path d="M0,640 C300,600 500,660 800,630 C1100,600 1300,650 1600,620 L1600,900 L0,900 Z" fill="url(#ground1)"/>
+
+  <!-- collapsing tent -->
+  <g transform="translate(300,610) rotate(-14)">
+    <path d="M0,0 L70,-140 L140,0 Z" fill="#120d0a"/>
+    <path d="M20,0 L70,-90 L120,0 Z" fill="#0c0906"/>
+  </g>
+  <g transform="translate(420,635) rotate(8)" opacity="0.85">
+    <path d="M0,0 L55,-100 L110,0 Z" fill="#150f0c"/>
+  </g>
+
+  <!-- flying debris -->
+  <ellipse cx="500" cy="470" rx="10" ry="4" fill="#1a1310" opacity="0.7" transform="rotate(20 500 470)"/>
+  <ellipse cx="560" cy="510" rx="14" ry="5" fill="#1a1310" opacity="0.6" transform="rotate(-10 560 510)"/>
+
+  <!-- scattering flock, small to large for depth -->
+  <g fill="#100b09">
+    <g transform="translate(760,700) scale(0.7)"><ellipse cx="0" cy="0" rx="22" ry="14"/><rect x="-14" y="8" width="4" height="14"/><rect x="8" y="8" width="4" height="14"/></g>
+    <g transform="translate(830,680) scale(0.55)"><ellipse cx="0" cy="0" rx="22" ry="14"/><rect x="-14" y="8" width="4" height="14"/><rect x="8" y="8" width="4" height="14"/></g>
+    <g transform="translate(660,730) scale(0.85)"><ellipse cx="0" cy="0" rx="22" ry="14"/><rect x="-14" y="8" width="4" height="14"/><rect x="8" y="8" width="4" height="14"/></g>
+    <g transform="translate(950,660) scale(0.45)"><ellipse cx="0" cy="0" rx="22" ry="14"/><rect x="-14" y="8" width="4" height="14"/><rect x="8" y="8" width="4" height="14"/></g>
+    <g transform="translate(560,760) scale(1)"><ellipse cx="0" cy="0" rx="22" ry="14"/><rect x="-14" y="8" width="4" height="14"/><rect x="8" y="8" width="4" height="14"/></g>
+  </g>
+
+  <!-- fleeing birds -->
+  <g stroke="#1a1310" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6">
+    <path d="M180,160 q14,-14 28,0 q14,-14 28,0"/>
+    <path d="M240,200 q10,-10 20,0 q10,-10 20,0"/>
+    <path d="M120,230 q10,-10 20,0 q10,-10 20,0"/>
+  </g>
+</svg>

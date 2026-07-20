@@ -28,6 +28,8 @@ const hannah: BibleAccount = {
   ],
   prayerPrompt:
     "Lord, you saw Hannah's tears year after year. You see mine too. Keep my heart honest before you while I wait, even when I can't see how long it will be.",
+  takeaway:
+    "Hannah kept praying through years of no answer, and kept her word once it came — persistent, honest prayer wasn't wasted.",
   estimatedReadingTime: 5,
   searchKeywords: [
     "waiting",

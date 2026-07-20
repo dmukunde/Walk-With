@@ -38,6 +38,8 @@ const elijah: BibleAccount = {
   ],
   prayerPrompt:
     "Lord, when I am worn down and don't have words left, meet me the way you met Elijah — with rest before requirements. Help me grow quiet enough to hear you.",
+  takeaway:
+    "God met Elijah's collapse with food, rest, and a quiet voice — not correction. Provision came before understanding.",
   estimatedReadingTime: 5,
   searchKeywords: [
     "low",

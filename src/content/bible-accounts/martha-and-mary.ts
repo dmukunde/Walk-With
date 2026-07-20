@@ -37,6 +37,8 @@ const marthaAndMary: BibleAccount = {
   ],
   prayerPrompt:
     "Jesus, like Martha and Mary, I bring you my grief honestly, without softening it. Thank you that you weep with me before you do anything else.",
+  takeaway:
+    "Jesus wept alongside Martha and Mary's grief before he did anything to change their circumstances.",
   estimatedReadingTime: 5,
   searchKeywords: [
     "grief",

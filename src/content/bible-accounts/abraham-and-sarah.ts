@@ -37,6 +37,8 @@ const abrahamAndSarah: BibleAccount = {
   ],
   prayerPrompt:
     "God, like Abraham and Sarah, I've been waiting a long time, and it's starting to feel unrealistic. Help me keep believing you without trying to force what only you can do.",
+  takeaway:
+    "The promise came exactly on time — just not on Abraham and Sarah's timeline, which ran decades long.",
   estimatedReadingTime: 5,
   searchKeywords: [
     "waiting",

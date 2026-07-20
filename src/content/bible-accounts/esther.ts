@@ -28,6 +28,8 @@ const esther: BibleAccount = {
   ],
   prayerPrompt:
     "God, I don't fully know what I'm feeling or facing right now. Like Esther, help me take the next right step even without certainty, and help me trust that you haven't lost track of where I am.",
+  takeaway:
+    "Esther acted without knowing how things would turn out — she had a decision to make, not a guarantee.",
   estimatedReadingTime: 5,
   searchKeywords: [],
   scenes: [

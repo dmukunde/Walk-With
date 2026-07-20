@@ -28,6 +28,8 @@ const david: BibleAccount = {
   ],
   prayerPrompt:
     "God, like David, I bring you a real fear, not a tidy one. Thank you that you don't wait for me to calm down before drawing near. Help me trust that you're close, even in the waiting.",
+  takeaway:
+    "David's psalm was written from inside real danger, not after it passed — honesty with God doesn't require the situation to be resolved first.",
   estimatedReadingTime: 5,
   searchKeywords: [
     "anxious",

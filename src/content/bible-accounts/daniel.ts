@@ -37,6 +37,8 @@ const daniel: BibleAccount = {
   ],
   prayerPrompt:
     "God, like Daniel, I don't know exactly how this will turn out. Help me stay faithful to what I know is right, even in the middle of real fear.",
+  takeaway:
+    "Daniel kept his ordinary habit of prayer even after it became dangerous, without knowing in advance he'd be rescued.",
   estimatedReadingTime: 4,
   searchKeywords: [
     "afraid",

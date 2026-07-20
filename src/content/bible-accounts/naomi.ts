@@ -28,6 +28,8 @@ const naomi: BibleAccount = {
   ],
   prayerPrompt:
     "God, my grief is real, and I'm not going to rush past it. Stay close to me the way you stayed present in Naomi's story, even in the part where she called you the reason for her bitterness.",
+  takeaway:
+    "Naomi named her bitterness plainly and was still cared for — honest grief and God's provision show up in the same story.",
   estimatedReadingTime: 5,
   searchKeywords: [
     "grief",

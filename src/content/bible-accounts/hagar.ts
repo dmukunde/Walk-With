@@ -28,6 +28,8 @@ const hagar: BibleAccount = {
   ],
   prayerPrompt:
     "God, Hagar called you 'the God who sees.' I'm asking you to see me in this lonely place, the way you saw her.",
+  takeaway:
+    "Twice sent away with nowhere to turn, Hagar was seen and heard by God both times — being overlooked by people isn't the same as being invisible to him.",
   estimatedReadingTime: 4,
   searchKeywords: [
     "lonely",

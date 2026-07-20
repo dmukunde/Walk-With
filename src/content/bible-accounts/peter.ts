@@ -28,6 +28,8 @@ const peter: BibleAccount = {
   ],
   prayerPrompt:
     "Lord, you know exactly what I've done, the way you knew about Peter. Thank you for seeking me out instead of leaving me in my shame. Help me receive what you're offering instead of carrying it alone.",
+  takeaway:
+    "Jesus sought Peter out after his most public failure, not to shame him, but to restore him and give him work to do.",
   estimatedReadingTime: 5,
   searchKeywords: [
     "guilty",

@@ -42,6 +42,8 @@ const joseph: BibleAccount = {
   ],
   prayerPrompt:
     "God, it's a lot right now, and I can't see how this resolves. I'm asking you to be present in the middle of it, the way you were with Joseph before anything had changed.",
+  takeaway:
+    "\"The Lord was with him\" appears at Joseph's lowest points in the text — long before his circumstances changed.",
   estimatedReadingTime: 6,
   searchKeywords: [
     "overwhelmed",

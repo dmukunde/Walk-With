@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three robed figures walk in from the horizon toward a seated man on a mound, under a dim evening sky.">
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3c3550"/>
+      <stop offset="55%" stop-color="#7a5a52"/>
+      <stop offset="100%" stop-color="#b98a58"/>
+    </linearGradient>
+    <linearGradient id="ground3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3c2f26"/>
+      <stop offset="100%" stop-color="#16110d"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="900" fill="url(#sky3)"/>
+
+  <path d="M0,580 L200,560 L420,590 L650,555 L900,585 L1150,560 L1350,580 L1600,565 L1600,650 L0,650 Z" fill="#332a30" opacity="0.5"/>
+
+  <path d="M0,640 C300,600 600,660 900,625 C1150,600 1400,645 1600,620 L1600,900 L0,900 Z" fill="url(#ground3)"/>
+
+  <ellipse cx="1080" cy="740" rx="200" ry="50" fill="#241d18"/>
+  <g transform="translate(1060,678)">
+    <path d="M-55,110 C-64,36 -36,-36 0,-64 C36,-36 64,36 55,110 Z" fill="#0f0c0a"/>
+    <circle cx="0" cy="-86" r="24" fill="#0f0c0a"/>
+  </g>
+
+  <g fill="#141019" opacity="0.9">
+    <g transform="translate(260,700) scale(0.62)">
+      <path d="M-40,140 C-46,80 -30,10 0,-90 C30,10 46,80 40,140 Z"/>
+      <circle cx="0" cy="-112" r="24"/>
+    </g>
+    <g transform="translate(360,712) scale(0.66)">
+      <path d="M-40,140 C-46,80 -30,10 0,-90 C30,10 46,80 40,140 Z"/>
+      <circle cx="0" cy="-112" r="24"/>
+    </g>
+    <g transform="translate(190,690) scale(0.58)">
+      <path d="M-40,140 C-46,80 -30,10 0,-90 C30,10 46,80 40,140 Z"/>
+      <circle cx="0" cy="-112" r="24"/>
+    </g>
+  </g>
+
+  <g fill="#241c22" opacity="0.4">
+    <ellipse cx="700" cy="670" rx="10" ry="4"/>
+    <ellipse cx="760" cy="660" rx="8" ry="3"/>
+    <ellipse cx="820" cy="672" rx="9" ry="3"/>
+  </g>
+</svg>

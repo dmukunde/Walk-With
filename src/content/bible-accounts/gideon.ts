@@ -32,6 +32,8 @@ const gideon: BibleAccount = {
   ],
   prayerPrompt:
     "God, like Gideon, I don't feel brave or ready. Thank you that you worked with his doubts instead of dismissing them. Meet me in my hesitation, and help me take the next step.",
+  takeaway:
+    "God called Gideon 'mighty warrior' before he had done anything brave, and kept working with his doubts and requests for proof.",
   estimatedReadingTime: 5,
   searchKeywords: [
     "afraid",

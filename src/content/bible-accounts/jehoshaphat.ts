@@ -37,6 +37,8 @@ const jehoshaphat: BibleAccount = {
   ],
   prayerPrompt:
     "God, like Jehoshaphat, I don't know what to do, but my eyes are on you. Help me bring my fear honestly instead of pretending I have this figured out.",
+  takeaway:
+    "Jehoshaphat's honest admission — \"we don't know what to do\" — came before he was told the battle was God's to fight, not his.",
   estimatedReadingTime: 5,
   searchKeywords: [
     "overwhelmed",
