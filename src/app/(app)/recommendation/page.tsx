@@ -46,7 +46,7 @@ export default async function RecommendationPage({
       >
         <div className="bg-radial-glow p-7 sm:p-9">
           <p className="text-xs font-medium tracking-wide text-primary uppercase">
-            Today&apos;s story
+            An account for you
           </p>
           <h2 className="mt-2 font-heading text-3xl font-medium tracking-tight text-foreground">
             {story.name}
@@ -55,13 +55,23 @@ export default async function RecommendationPage({
           <p className="mt-5 leading-relaxed text-foreground/90">
             {story.overview}
           </p>
+
+          <div className="mt-6 rounded-2xl bg-card/70 p-5 ring-1 ring-border/60">
+            <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
+              Why this account
+            </p>
+            <p className="mt-2 leading-relaxed text-foreground/90">
+              {story.whyRelevant}
+            </p>
+          </div>
+
           <Button
             render={<Link href={`/story/${story.slug}`} />}
             nativeButton={false}
             size="lg"
             className="mt-7"
           >
-            Read {story.name}&apos;s story
+            Explore {story.name}&apos;s account
             <ArrowRight className="size-4" />
           </Button>
         </div>

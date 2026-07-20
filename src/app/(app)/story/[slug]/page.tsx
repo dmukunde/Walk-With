@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Film, BookOpen, MessageCircleHeart, HandHeart } from "lucide-react";
-import { STORIES } from "@/lib/recommendations/mock";
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  Film,
+  BookOpen,
+  MessageCircleHeart,
+  HandHeart,
+} from "lucide-react";
+import { STORIES, bibleGatewayUrl } from "@/lib/recommendations/mock";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -46,7 +53,7 @@ export default async function StoryPage({
         </span>
         <div>
           <h2 className="font-heading text-lg font-medium text-foreground">
-            Overview
+            What the Bible Records
           </h2>
           <p className="mt-2 leading-relaxed text-foreground/90">
             {story.overview}
@@ -55,12 +62,45 @@ export default async function StoryPage({
       </section>
 
       <section
+        className="animate-fade-up flex flex-col items-start gap-3 rounded-3xl bg-primary/10 p-6 ring-1 ring-primary/20 sm:flex-row sm:items-center sm:justify-between sm:p-7"
+        style={{ animationDelay: "150ms" }}
+      >
+        <div>
+          <h2 className="font-heading text-lg font-medium text-foreground">
+            Read the Full Account
+          </h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            This is a guide, not a substitute. {story.name}&apos;s story is
+            worth reading in full, in {story.fullReference}.
+          </p>
+        </div>
+        <Button
+          render={
+            <a
+              href={bibleGatewayUrl(story.fullReference)}
+              target="_blank"
+              rel="noopener noreferrer"
+            />
+          }
+          nativeButton={false}
+          variant="outline"
+          className="w-full shrink-0 bg-background sm:w-auto"
+        >
+          Read {story.fullReference}
+          <ArrowUpRight className="size-4" />
+        </Button>
+      </section>
+
+      <section
         className="animate-fade-up rounded-3xl border border-border/60 bg-card p-6 shadow-[0_1px_2px_rgba(0,0,0,0.03)] sm:p-7"
         style={{ animationDelay: "180ms" }}
       >
         <h2 className="font-heading text-lg font-medium text-foreground">
-          Key Scriptures
+          Verses to Notice
         </h2>
+        <p className="mt-1 text-sm text-muted-foreground">
+          A few lines from the full account above, worth sitting with.
+        </p>
         <div className="mt-4 flex flex-col gap-4">
           {story.scriptures.map((scripture) => (
             <div
@@ -89,6 +129,10 @@ export default async function StoryPage({
           <h2 className="font-heading text-lg font-medium text-foreground">
             Guided Reflection
           </h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Rooted in what happened in {story.name}&apos;s account, not
+            general advice.
+          </p>
           <ul className="mt-3 flex flex-col gap-3">
             {story.reflection.map((question) => (
               <li
@@ -113,9 +157,14 @@ export default async function StoryPage({
           </span>
           <div>
             <h2 className="font-heading text-lg font-medium text-foreground">
-              A Prayer
+              A Prayer to Pray
             </h2>
-            <p className="mt-2 leading-relaxed text-foreground/90 italic">
+            <p className="mt-1 text-sm text-muted-foreground">
+              Not words from God, but a starting point inspired by{" "}
+              {story.name}&apos;s account — pray it as your own, in your own
+              words.
+            </p>
+            <p className="mt-3 leading-relaxed text-foreground/90 italic">
               {story.prayer}
             </p>
           </div>
