@@ -38,6 +38,45 @@ const hagar: BibleAccount = {
     "abandoned",
     "forgotten",
   ],
+  scenes: [
+    {
+      id: "mistreated-and-fleeing",
+      title: "Mistreated and fleeing.",
+      narrative:
+        "Sarai gave Hagar to Abram to bear a child on her behalf, but once Hagar conceived, Sarai treated her harshly, and Hagar fled into the wilderness.",
+      scriptureReferences: [
+        { reference: "Genesis 16:6", text: "Then Sarai mistreated Hagar; so she fled from her." },
+      ],
+    },
+    {
+      id: "found-by-the-well",
+      title: "Found by the well.",
+      narrative:
+        "The angel of the Lord found her by a spring in the desert and called her by name, asking where she had come from and where she was going.",
+      scriptureReferences: [
+        { reference: "Genesis 16:7–8", text: "The angel of the Lord found Hagar near a spring... “Hagar, servant of Sarai, where have you come from, and where are you going?”" },
+      ],
+    },
+    {
+      id: "the-god-who-sees-me",
+      title: "The God who sees me.",
+      narrative:
+        "Hagar responded by naming God \"El Roi,\" saying, \"You are the God who sees me.\" She returned and gave birth to a son, Ishmael.",
+      scriptureReferences: [
+        { reference: "Genesis 16:13", text: "She gave this name to the Lord who spoke to her: “You are the God who sees me.”" },
+      ],
+    },
+    {
+      id: "sent-away-again-and-heard",
+      title: "Sent away again, and heard.",
+      narrative:
+        "Years later, Hagar and Ishmael were sent away again and ran out of water in the desert. As she wept, God heard the boy crying and opened her eyes to see a well of water.",
+      scriptureReferences: [
+        { reference: "Genesis 21:17", text: "God heard the boy crying, and the angel of God called to Hagar from heaven." },
+        { reference: "Genesis 21:19", text: "God opened her eyes and she saw a well of water." },
+      ],
+    },
+  ],
 };
 
 export default hagar;

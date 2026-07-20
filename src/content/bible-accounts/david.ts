@@ -44,6 +44,54 @@ const david: BibleAccount = {
     "fear",
     "fearful",
   ],
+  scenes: [
+    {
+      id: "anointed-but-not-yet-king",
+      title: "Anointed, but not yet king.",
+      narrative:
+        "Samuel anointed David as Israel's next king while he was still a shepherd boy, the youngest of his brothers. Nothing about his circumstances changed right away — he went back to tending sheep.",
+      scriptureReferences: [
+        { reference: "1 Samuel 16:12–13", text: "Samuel took the horn of oil and anointed him in the presence of his brothers, and from that day on the Spirit of the Lord came powerfully upon David." },
+      ],
+    },
+    {
+      id: "hunted-by-saul",
+      title: "Hunted by Saul.",
+      narrative:
+        "David spent years fleeing King Saul, who wanted him dead out of jealousy, moving from place to place with no settled home.",
+      scriptureReferences: [
+        { reference: "1 Samuel 23:14", text: "David stayed in the wilderness strongholds... Day after day Saul searched for him, but God did not give David into his hands." },
+      ],
+    },
+    {
+      id: "feigning-madness-before-achish",
+      title: "Feigning madness before Achish.",
+      narrative:
+        "Fleeing to Gath, David realized he was in danger there too. He pretended to be insane, scratching at the city gate and letting saliva run down his beard, until King Achish sent him away.",
+      scriptureReferences: [
+        { reference: "1 Samuel 21:12–13", text: "David... pretended to be insane in their presence; and while he was in their hands he acted like a madman." },
+      ],
+    },
+    {
+      id: "writing-psalm-34",
+      title: "Writing Psalm 34.",
+      narrative:
+        "In the aftermath, David wrote a psalm of praise, saying he sought the Lord and was delivered from all his fears, and inviting others to \"taste and see that the Lord is good.\"",
+      scriptureReferences: [
+        { reference: "Psalm 34:4", text: "I sought the Lord, and he answered me; he delivered me from all my fears." },
+        { reference: "Psalm 34:8", text: "Taste and see that the Lord is good." },
+      ],
+    },
+    {
+      id: "close-to-the-brokenhearted",
+      title: "Close to the brokenhearted.",
+      narrative:
+        "The psalm ends with the assurance that the Lord is close to the brokenhearted and saves those who are crushed in spirit — words written from inside the danger, not after it was safely over.",
+      scriptureReferences: [
+        { reference: "Psalm 34:17–18", text: "The righteous cry out, and the Lord hears them... The Lord is close to the brokenhearted." },
+      ],
+    },
+  ],
 };
 
 export default david;

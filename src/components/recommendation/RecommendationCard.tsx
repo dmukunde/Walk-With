@@ -51,16 +51,24 @@ export function RecommendationCard({
         </p>
       </div>
 
-      <Button
-        render={<Link href={`/story/${account.id}`} />}
-        nativeButton={false}
-        size="lg"
-        variant={featured ? "default" : "outline"}
-        className={cn("mt-6", !featured && "bg-background")}
-      >
-        Explore {account.name}&apos;s account
-        <ArrowRight className="size-4" />
-      </Button>
+      <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
+        <Button
+          render={<Link href={`/journey/${account.id}`} />}
+          nativeButton={false}
+          size="lg"
+          variant={featured ? "default" : "outline"}
+          className={cn(!featured && "bg-background")}
+        >
+          Begin {account.name}&apos;s journey
+          <ArrowRight className="size-4" />
+        </Button>
+        <Link
+          href={`/story/${account.id}`}
+          className="text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+        >
+          Or read the quick summary
+        </Link>
+      </div>
     </div>
   );
 }

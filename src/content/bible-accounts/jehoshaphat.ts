@@ -47,6 +47,44 @@ const jehoshaphat: BibleAccount = {
     "scared",
     "afraid",
   ],
+  scenes: [
+    {
+      id: "a-vast-army-approaches",
+      title: "A vast army approaches.",
+      narrative:
+        "Jehoshaphat received word that a huge coalition of armies was advancing against Judah.",
+      scriptureReferences: [
+        { reference: "2 Chronicles 20:2", text: "A vast army is coming against you from Edom, from the other side of the Dead Sea." },
+      ],
+    },
+    {
+      id: "alarmed-he-sought-the-lord",
+      title: "Alarmed, he sought the Lord.",
+      narrative:
+        "Afraid, Jehoshaphat proclaimed a fast for the whole nation and prayed publicly, admitting plainly, \"We do not know what to do, but our eyes are on you.\"",
+      scriptureReferences: [
+        { reference: "2 Chronicles 20:12", text: "We have no power to face this vast army... We do not know what to do, but our eyes are on you." },
+      ],
+    },
+    {
+      id: "the-battle-is-not-yours",
+      title: "\"The battle is not yours.\"",
+      narrative:
+        "A prophet, Jahaziel, told the assembly not to be afraid, because the battle belonged to God, not to them, and they would not even need to fight.",
+      scriptureReferences: [
+        { reference: "2 Chronicles 20:15", text: "Do not be afraid or discouraged because of this vast army. For the battle is not yours, but God's." },
+      ],
+    },
+    {
+      id: "singers-before-the-army",
+      title: "Singers before the army.",
+      narrative:
+        "The next morning, Jehoshaphat appointed singers to go out ahead of the army praising God. As they sang, the opposing armies turned on each other and were defeated.",
+      scriptureReferences: [
+        { reference: "2 Chronicles 20:22", text: "As they began to sing and praise, the Lord set ambushes against the men... who were invading Judah, and they were defeated." },
+      ],
+    },
+  ],
 };
 
 export default jehoshaphat;

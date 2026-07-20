@@ -39,6 +39,44 @@ const peter: BibleAccount = {
     "failure",
     "sorry",
   ],
+  scenes: [
+    {
+      id: "i-will-never-disown-you",
+      title: "\"I will never disown you.\"",
+      narrative:
+        "At the Last Supper, Jesus told Peter that he would deny him three times before the rooster crowed. Peter insisted he was ready to go to prison and death with Jesus.",
+      scriptureReferences: [
+        { reference: "Luke 22:33–34", text: "Peter replied, “Lord, I am ready to go with you to prison and to death.” Jesus answered, “...you will deny three times that you know me.”" },
+      ],
+    },
+    {
+      id: "three-denials",
+      title: "Three denials.",
+      narrative:
+        "In the courtyard outside Jesus' trial, Peter was asked three times if he knew Jesus, and three times he denied it — the last time with cursing.",
+      scriptureReferences: [
+        { reference: "Luke 22:57", text: "But he denied it. “Woman, I don't know him,” he said." },
+      ],
+    },
+    {
+      id: "the-lord-looked-at-him",
+      title: "The Lord looked at him.",
+      narrative:
+        "As the rooster crowed, Jesus turned and looked straight at Peter. Peter remembered Jesus' words and went outside and wept bitterly.",
+      scriptureReferences: [
+        { reference: "Luke 22:61–62", text: "The Lord turned and looked straight at Peter... and he went outside and wept bitterly." },
+      ],
+    },
+    {
+      id: "do-you-love-me",
+      title: "\"Do you love me?\"",
+      narrative:
+        "After the resurrection, Jesus met Peter by the Sea of Galilee and asked him three times, \"Do you love me?\" — then told him to feed his sheep, restoring him to his calling.",
+      scriptureReferences: [
+        { reference: "John 21:17", text: "“Simon son of John, do you love me?”... “Lord, you know all things; you know that I love you.” Jesus said, “Feed my sheep.”" },
+      ],
+    },
+  ],
 };
 
 export default peter;

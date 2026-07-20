@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   ArrowLeft,
+  ArrowRight,
   ArrowUpRight,
   Film,
   BookOpen,
@@ -76,6 +77,18 @@ export default async function StoryPage({
             ))}
           </div>
         )}
+        <Button
+          render={<Link href={`/journey/${account.id}`} />}
+          nativeButton={false}
+          size="lg"
+          className="mt-6"
+        >
+          Begin the Journey
+          <ArrowRight className="size-4" />
+        </Button>
+        <p className="mt-2 text-xs text-muted-foreground">
+          An immersive, scene-by-scene way to experience this account.
+        </p>
       </div>
 
       <section

@@ -56,6 +56,45 @@ const elijah: BibleAccount = {
     "only one left",
     "isolated",
   ],
+  scenes: [
+    {
+      id: "victory-turns-to-fear",
+      title: "Victory turns to fear.",
+      narrative:
+        "Elijah had just defeated the prophets of Baal on Mount Carmel in a dramatic show of God's power. But when Queen Jezebel swore to kill him within a day, he ran for his life into the wilderness.",
+      scriptureReferences: [
+        { reference: "1 Kings 19:2–3", text: "Jezebel sent a messenger to Elijah... Elijah was afraid and ran for his life." },
+      ],
+    },
+    {
+      id: "under-the-broom-bush",
+      title: "Under the broom bush.",
+      narrative:
+        "Exhausted, Elijah sat down under a broom bush and asked God to let him die, saying he had had enough. Then he fell asleep.",
+      scriptureReferences: [
+        { reference: "1 Kings 19:4", text: "“I have had enough, Lord,” he said. “Take my life.”" },
+      ],
+    },
+    {
+      id: "fed-and-allowed-to-rest",
+      title: "Fed and allowed to rest.",
+      narrative:
+        "An angel touched him twice, telling him to get up and eat. Strengthened by that food, Elijah traveled forty days and nights to Horeb, the mountain of God.",
+      scriptureReferences: [
+        { reference: "1 Kings 19:7–8", text: "The angel of the Lord came back a second time and touched him and said, “Get up and eat, for the journey is too much for you.”" },
+      ],
+    },
+    {
+      id: "the-still-small-voice",
+      title: "The still, small voice.",
+      narrative:
+        "At the cave, God asked Elijah what he was doing there. Elijah said he was the only one left. God passed by — not in the wind, the earthquake, or the fire, but in a gentle whisper — and gave Elijah his next assignment.",
+      scriptureReferences: [
+        { reference: "1 Kings 19:11–12", text: "The Lord was not in the wind, the earthquake, or the fire — but in a still, small voice." },
+        { reference: "1 Kings 19:15", text: "The Lord said to him, “Go back the way you came.”" },
+      ],
+    },
+  ],
 };
 
 export default elijah;

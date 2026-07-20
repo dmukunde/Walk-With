@@ -15,8 +15,38 @@ export type EmotionTag =
   | "overwhelmed"
   | "unsure";
 
+/**
+ * Placeholders for future scene multimedia. All optional and all unset
+ * today — no AI-generated video yet. The Journey UI checks each field and
+ * falls back to a static illustration placeholder when it's missing, so
+ * adding real assets later is a content change, not a UI change.
+ */
+export type SceneMedia = {
+  /** Path to a static illustration for this scene, once real artwork exists. */
+  illustration?: string;
+  /** Path to a short video dramatizing this scene. */
+  video?: string;
+  /** Path to narrated audio for this scene's narrative. */
+  audioNarration?: string;
+  /** Identifier for a future animation asset (e.g. a Lottie file) for this scene. */
+  animation?: string;
+};
+
+export type Scene = {
+  /** Stable id within the account, e.g. "the-pain-of-waiting". */
+  id: string;
+  /** Short scene title, e.g. "The pain of waiting." */
+  title: string;
+  /** 2-4 sentences retelling this part of the account. Stays close to the text. */
+  narrative: string;
+  /** Scripture grounding this specific scene. */
+  scriptureReferences: { reference: string; text: string }[];
+  /** Multimedia for this scene, once produced. Undefined today for every scene. */
+  media?: SceneMedia;
+};
+
 export type BibleAccount = {
-  /** URL-safe unique id, e.g. "abraham-and-sarah". Used as the /story/[id] slug. */
+  /** URL-safe unique id, e.g. "abraham-and-sarah". Used as the /story/[id] and /journey/[id] slug. */
   id: string;
   /** Display name, e.g. "Hannah" or "Abraham & Sarah". */
   name: string;
@@ -44,4 +74,6 @@ export type BibleAccount = {
   estimatedReadingTime: number;
   /** Free-text phrases that should surface this account from the "what's on your mind" box. */
   searchKeywords: string[];
+  /** The account broken into an ordered sequence of scenes for the immersive Journey experience. */
+  scenes: Scene[];
 };

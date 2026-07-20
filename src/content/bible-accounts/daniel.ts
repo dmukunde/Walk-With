@@ -47,6 +47,44 @@ const daniel: BibleAccount = {
     "standing alone",
     "under pressure",
   ],
+  scenes: [
+    {
+      id: "a-plot-against-daniel",
+      title: "A plot against Daniel.",
+      narrative:
+        "Jealous officials, unable to find any fault in Daniel's work, convinced King Darius to sign a decree making it illegal to pray to anyone but the king for thirty days.",
+      scriptureReferences: [
+        { reference: "Daniel 6:5", text: "“We will never find any basis for charges against this man Daniel unless it has something to do with the law of his God.”" },
+      ],
+    },
+    {
+      id: "praying-as-always",
+      title: "Praying as always.",
+      narrative:
+        "When Daniel learned of the decree, he went home and prayed three times a day toward Jerusalem, just as he always had, with his windows open.",
+      scriptureReferences: [
+        { reference: "Daniel 6:10", text: "Three times a day he got down on his knees and prayed, giving thanks to his God, just as he had done before." },
+      ],
+    },
+    {
+      id: "thrown-to-the-lions",
+      title: "Thrown to the lions.",
+      narrative:
+        "Daniel was arrested and thrown into the lions' den. The king, who respected Daniel, spent the night fasting and could not sleep.",
+      scriptureReferences: [
+        { reference: "Daniel 6:18", text: "Then the king... spent the night without eating and without any entertainment being brought to him. And he could not sleep." },
+      ],
+    },
+    {
+      id: "unharmed-in-the-morning",
+      title: "Unharmed in the morning.",
+      narrative:
+        "At dawn, the king rushed to the den and called out to Daniel, who answered that God had sent an angel to shut the lions' mouths, because he was found innocent before God.",
+      scriptureReferences: [
+        { reference: "Daniel 6:22", text: "My God sent his angel, and he shut the mouths of the lions." },
+      ],
+    },
+  ],
 };
 
 export default daniel;

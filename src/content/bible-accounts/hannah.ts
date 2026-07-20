@@ -40,6 +40,57 @@ const hannah: BibleAccount = {
     "trying to have a baby",
     "hope",
   ],
+  scenes: [
+    {
+      id: "the-pain-of-waiting",
+      title: "The pain of waiting.",
+      narrative:
+        "Hannah was one of two wives of Elkanah. The other wife, Peninnah, had children, but the Lord had closed Hannah's womb. Year after year, when the family went up to worship at Shiloh, Peninnah provoked Hannah until she wept and could not eat.",
+      scriptureReferences: [
+        { reference: "1 Samuel 1:2", text: "Peninnah had children, but Hannah had none." },
+        { reference: "1 Samuel 1:6–7", text: "Her rival kept provoking her in order to irritate her... Hannah wept and would not eat." },
+      ],
+    },
+    {
+      id: "her-prayer-at-the-tabernacle",
+      title: "Her prayer at the tabernacle.",
+      narrative:
+        "Hannah rose and went to the tabernacle to pray. In deep anguish she wept bitterly and poured out her soul to the Lord, praying silently — her lips moving, but no sound coming out. She vowed that if God would give her a son, she would give him back to the Lord for all the days of his life.",
+      scriptureReferences: [
+        { reference: "1 Samuel 1:10", text: "In her deep anguish, Hannah prayed to the Lord, weeping bitterly." },
+        { reference: "1 Samuel 1:11", text: "I will give him to the Lord for all the days of his life." },
+      ],
+    },
+    {
+      id: "eli-misunderstands-her",
+      title: "Eli misunderstands her.",
+      narrative:
+        "Eli the priest was sitting near the doorpost of the temple and watched her mouth. Because she was praying silently, he assumed she was drunk and rebuked her. Hannah explained she had been pouring out her grief and anguish before the Lord, not drinking wine.",
+      scriptureReferences: [
+        { reference: "1 Samuel 1:14", text: "Eli said to her, “How long will you keep on being drunk? Put away your wine.”" },
+        { reference: "1 Samuel 1:15–16", text: "“I was pouring out my soul to the Lord... I have been praying here out of my great anguish and grief.”" },
+      ],
+    },
+    {
+      id: "she-leaves-encouraged",
+      title: "She leaves encouraged.",
+      narrative:
+        "Eli told her, \"Go in peace, and may the God of Israel grant what you have asked of him.\" Hannah replied, \"May your servant find favor in your eyes,\" and she went her way, ate something, and her face was no longer downcast.",
+      scriptureReferences: [
+        { reference: "1 Samuel 1:17–18", text: "“Go in peace, and may the God of Israel grant what you have asked of him.” ... Then she went her way... and her face was no longer downcast." },
+      ],
+    },
+    {
+      id: "jehovah-answers-her-prayer",
+      title: "Jehovah answers her prayer.",
+      narrative:
+        "In the course of time, Hannah became pregnant and gave birth to a son. She named him Samuel, saying, \"Because I asked the Lord for him.\" Once he was weaned, she brought him to the tabernacle and gave him to the Lord for as long as he lived, just as she had vowed.",
+      scriptureReferences: [
+        { reference: "1 Samuel 1:20", text: "She gave him the name Samuel, saying, “Because I asked the Lord for him.”" },
+        { reference: "1 Samuel 1:27–28", text: "I prayed for this child, and the Lord has granted what I asked of him. So now I give him to the Lord." },
+      ],
+    },
+  ],
 };
 
 export default hannah;

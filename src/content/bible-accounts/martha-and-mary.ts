@@ -48,6 +48,44 @@ const marthaAndMary: BibleAccount = {
     "sister",
     "why did this happen",
   ],
+  scenes: [
+    {
+      id: "lazarus-is-sick-then-dies",
+      title: "Lazarus is sick, then dies.",
+      narrative:
+        "Martha and Mary sent word to Jesus that their brother Lazarus was sick, but Jesus stayed where he was two more days, and Lazarus died before he arrived.",
+      scriptureReferences: [
+        { reference: "John 11:6", text: "When he heard that Lazarus was sick, he stayed where he was two more days." },
+      ],
+    },
+    {
+      id: "if-you-had-been-here",
+      title: "\"If you had been here...\"",
+      narrative:
+        "Martha went out to meet Jesus and told him plainly that if he had been there, her brother would not have died. Mary later said the same words to him, weeping.",
+      scriptureReferences: [
+        { reference: "John 11:21", text: "“Lord,” Martha said to Jesus, “if you had been here, my brother would not have died.”" },
+      ],
+    },
+    {
+      id: "jesus-wept",
+      title: "Jesus wept.",
+      narrative:
+        "Seeing Mary and the others weeping, Jesus was deeply moved in spirit and troubled, and he himself wept at the tomb.",
+      scriptureReferences: [
+        { reference: "John 11:35", text: "Jesus wept." },
+      ],
+    },
+    {
+      id: "lazarus-come-out",
+      title: "\"Lazarus, come out.\"",
+      narrative:
+        "Jesus ordered the stone rolled away, prayed aloud, and called Lazarus out of the tomb. Lazarus came out, still wrapped in graveclothes.",
+      scriptureReferences: [
+        { reference: "John 11:43–44", text: "“Lazarus, come out!” The dead man came out, his hands and feet wrapped with strips of linen." },
+      ],
+    },
+  ],
 };
 
 export default marthaAndMary;
